@@ -34,7 +34,7 @@ mutation deleteTask($id: ID!) {
 
 export const GET_TASK = {
     method: 'POST',
-    url: 'http://localhost:8000/graphql/',
+    url: 'https://vishaldeveloperwork.pythonanywhere.com/graphql/',
     headers: {
       'content-type': 'application/json'
     },
@@ -50,7 +50,7 @@ export const GET_TASK = {
   };
 
 export const DELETE_BULK_TASK = gql`
-  mutation deleteMutationbulk($id: ID!){
+  mutation bulkDelete($id: [ID!]!){
     bulkDelete(ids: $id) {
         success
       }
